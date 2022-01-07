@@ -1,5 +1,8 @@
 site_name: Kanji's TidBits
 site_url: https://tidbits.cryosoft.co.ke
+repo_url: https://github.com/karimkkanji/tidbits/
+site_description: "Tidbits - the things that fascinate me on a daily"
+site_author: "Karim K. Kanji"
 nav:
   - Home: index.md
   - Tidbits: tidbits.md
