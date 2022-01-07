@@ -1,0 +1,8 @@
+site_name: Kanji's TidBits
+site_url: https://tidbits.cryosoft.co.ke
+nav:
+  - Home: index.md
+  - Tidbits: tidbits.md
+theme: slate
+  
+
