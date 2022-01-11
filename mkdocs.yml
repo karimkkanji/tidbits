@@ -6,6 +6,7 @@ site_author: "Karim K. Kanji"
 nav:
   - Home: index.md
   - Tidbits: tidbits.md
+  - Tutorials: tutorials.md
 theme: slate
   
 
