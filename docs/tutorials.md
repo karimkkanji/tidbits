@@ -613,3 +613,35 @@ RewriteRule (.+)\.(jpe?g|png)$ $1.webp [T=image/webp,E=accept:1]
 ```
 
 [Source](https://github.com/vincentorback/WebP-images-with-htaccess)
+
+# Creating SSH Keys for Gitlab on Windows
+
+1. Go to "Git Bash" just like cmd. Right click and "Run as Administrator". (You can use Powershell too)
+2. Type `ssh-keygen`
+3. Press enter.
+4. It will ask you to save the key to the specific directory.
+5. Press enter. It will prompt you to type password or enter without password. (Remember anytime you want to use it you will be required to enter the password)
+6. The public key will be created to the specific directory.
+7. Now go to the directory and open `.ssh` folder.
+8. You'll see a file `id_rsa.pub`. Open it on notepad. Copy all text from it. ( You may type: type `%userprofile%\.ssh\id_rsa.pub | clip` to copy it to clipboard)
+9. Go to [https://gitlab.com/-/profile/keys](https://gitlab.com/-/profile/keys)  or
+10. Paste the Public SSH Key you copied in the "key" textfield. (It should begin with 'ssh-ed25519' or 'ssh-rsa')
+11. Now click on the "Title" below. It will automatically get filled.
+12. Then click "Add key".
+13. That's all. 👏
+
+# Use Windows Hello on WSL
+
+There is a developer by the name _Takaya Saeki_ who created a script that installs a feature that allows you to use your Windows Hello authenication on Windows Subsystem For Linux distro installations. Once a Super User password is required, Windows Hello opens a dialog allowing you to authenicate using biometrics.
+It is as simple as typing/copying the following to the installation:
+
+```bash
+wget http://github.com/nullpo-head/WSL-Hello-sudo/releases/latest/download/rbelease.tar.gz
+tar xvf release.tar.gz
+cd release
+./install.sh
+```
+
+Here are more details on how to head over to [Windows Central](https://www.windowscentral.com/making-windows-subsystem-linux-wsl-even-better-windows-hello) they have a more detailed article on the same.
+
+Regards.
