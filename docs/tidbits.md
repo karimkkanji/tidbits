@@ -20,3 +20,21 @@ git branch | grep -v "master" | xargs git branch -D
 ```
 
 Hope that solves your problem!
+
+# February 2022
+
+## Storing Git Remote Credentials in Ubuntu Unencrypted
+Hi there.
+Are you using Ubuntu and keep getting the prompt to enter your Github/Gitlab credentials? 
+
+Well, there is a way to store the credentials but there is a catch. It is unencrypted as it is stored as a plain text file on your file system. 
+If you don't mind the caveat, head over to your terminal and type this:
+
+```
+git config --global credential.helper store
+```
+Then type:
+```
+git pull
+```
+Enter your credentials and you are good to go, but be careful, some malicious NPM Modules may extract the credentials and use them to do EVIL!!
